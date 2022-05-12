@@ -9,7 +9,7 @@ jobs:
     name: Crowdin Translation Memory Trigger
     runs-on: ubuntu-latest
     steps:
-      - uses: chipbuster/crowdin-trigger-tm@trunk
+      - uses: chipbuster/crowdin-trigger-tm@dev
         with:
           project_id: 372655
           api_key: ${{ secrets.CROWDIN_API_KEY }}
