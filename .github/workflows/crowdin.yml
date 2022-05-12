@@ -1,0 +1,15 @@
+name: Crowdin Updates
+on:
+  push:
+    branches:
+      - trunk
+
+jobs:
+  trigger_crowdin_tm:
+    name: Crowdin Translation Memory Trigger
+    runs-on: ubuntu-latest
+    steps:
+      - uses: chipbuster/crowdin-trigger-tm@master
+        with:
+          project_id: 372655
+          api_key: ${{ secrets.CROWDIN_API_KEY }}
